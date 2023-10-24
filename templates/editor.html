@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 <main style="padding-left: 250px;">
-  <div class="main-home-container">
+  <div class="main-home-container" style="height: unset;">
     <div class="sidebar">
       <div class="sidebar-buttons">
         <i class="fa-solid fa-user"></i>
@@ -20,15 +20,29 @@
         <button class="note">
           <p>NOTE 3</p>
         </button>
-        <button class="note">
-          <p>NOTE 4</p>
-        </button>
       </div>
     </div>
-
-      <textarea class="editor" cols="30" rows="10">TITLE
-          </textarea>
+  </div>
+  <div style="height: 100%; width: 100%;">
+    <div id="editor-container">
+    </div>
+  </div>
+    
+        
   </div>
 </main>
-
+ <!-- Include the Quill library -->
+ <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+<script>
+  var quill = new Quill('#editor-container', {
+  modules: {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ['bold', 'italic', 'underline']
+    ]
+  },
+  placeholder: 'Compose an epic...',
+  theme: 'snow'  // or 'bubble'
+});
+</script>
 {% endblock content %}

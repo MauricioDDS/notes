@@ -28,31 +28,29 @@ body {
 }
 
 main {
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: unset;
   background-color: var(--background);
   height: 100vh;
   color: var();
 }
 
 .main-home-container{
-  display: flex;  
+  /* display: flex; */
   justify-content: space-evenly;
   height: 100%;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
 }
 
 .main-home-container p {
-  display: flex;
   font-size: 8rem;
   font-family: Work Sans;
   line-height: 6rem;
   margin-bottom: 20px;
 }
+
 .main-home-container span {
   display: block;
   line-height: 5rem;
@@ -472,7 +470,7 @@ textarea:focus {
   border: 1px;
 }
 
-
-
-
-
+#editor-container {
+  height: 375px;
+  overflow: hidden;
+}
