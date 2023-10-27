@@ -36,7 +36,7 @@ main {
 }
 
 .main-home-container{
-  /* display: flex; */
+  display: flex;
   justify-content: space-evenly;
   height: 100%;
   flex-direction: row;
@@ -471,6 +471,5 @@ textarea:focus {
 }
 
 #editor-container {
-  height: 375px;
   overflow: hidden;
 }
